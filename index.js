@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mySecret = process.env.DB_URL;
 
 require('dotenv').config();
 
@@ -14,6 +13,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
   .catch((err) => {
     console.error('Error connecting to the database', err);
   });
+  
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
