@@ -7,7 +7,7 @@ const mySecret = process.env.DB_URL;
 
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
+mongoose.connect("mongodb+srv://salmakhaled963:fLF1zGkN0uHkfiod@free.g8gahvx.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     console.log('Database connected successfully');
   })
